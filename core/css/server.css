@@ -1,0 +1,391 @@
+/* *
+ * @author Jan-Christoph Borchardt, http://jancborchardt.net
+ * @copyright Copyright (c) 2015, ownCloud, Inc.
+ * @license AGPL-3.0
+ *
+ * This code is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License, version 3,
+ * as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License, version 3,
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
+ */
+
+/*  We are overiding the all theme varialbes here-
+    The perferred method of overriding the variables.scss or using the defaults.php didn't appear to work
+*/
+:root {
+    --color-main-background:#ffffff;
+    --color-main-background-rgb:255,255,255;
+    --color-main-background-translucent:rgba(var(--color-main-background-rgb), 1);
+    --color-main-background-blur:#ffffff;
+    --filter-background-blur:none;
+    --gradient-main-background:var(--color-main-background) 0%, var(--color-main-background-translucent) 85%, transparent 100%;
+    --color-background-hover:#f5f5f5;
+    --color-background-dark:#cccccc;
+    --color-background-darker:#cccccc;
+    --color-placeholder-light:#b3b3b3;
+    --color-placeholder-dark:#8c8c8c;
+    --color-main-text:#000000;
+    --color-text-maxcontrast:#000000;
+    --color-text-maxcontrast-default:#6b6b6b;
+    --color-text-maxcontrast-background-blur:#000000;
+    --color-text-light:#000000;
+    --color-text-lighter:#000000;
+    --color-scrollbar:#bfbfbf;
+    --color-error:#D10000;
+    --color-error-rgb:209,0,0;
+    --color-error-hover:#a80000;
+    --color-error-text:#7a0000;
+    --color-warning:#995900;
+    --color-warning-rgb:153,89,0;
+    --color-warning-hover:#754400;
+    --color-warning-text:#573200;
+    --color-success:#207830;
+    --color-success-rgb:32,120,48;
+    --color-success-hover:#185c25;
+    --color-success-text:#114019;
+    --color-info:#006DA8;
+    --color-info-rgb:0,109,168;
+    --color-info-hover:#005684;
+    --color-info-text:#003b5c;
+    --color-loading-light:#dddddd;
+    --color-loading-dark:#000000;
+    --color-box-shadow-rgb:#000000;
+    --color-box-shadow:#000000;
+    --color-border:#808080;
+    --color-border-dark:#808080;
+    --color-border-maxcontrast:#707070;
+    --font-face:system-ui, -apple-system, "Segoe UI", Roboto, Oxygen-Sans, Cantarell, Ubuntu, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --default-font-size:15px;
+    --animation-quick:100ms;
+    --animation-slow:300ms;
+    --border-radius:3px;
+    --border-radius-large:10px;
+    --border-radius-rounded:28px;
+    --border-radius-pill:100px;
+    --default-clickable-area:44px;
+    --default-line-height:24px;
+    --default-grid-baseline:4px;
+    --header-height:50px;
+    --navigation-width:300px;
+    --sidebar-min-width:300px;
+    --sidebar-max-width:500px;
+    --list-min-width:200px;
+    --list-max-width:300px;
+    --header-menu-item-height:44px;
+    --header-menu-profile-item-height:66px;
+    --breakpoint-mobile:1024px;
+    --background-invert-if-dark:no;
+    --background-invert-if-bright:invert(100%);
+    --background-image-invert-if-bright:no;
+    --primary-invert-if-bright:no;
+    --primary-invert-if-dark:invert(100%);
+    --color-primary:#3D5978;
+    --color-primary-default:#0082c9;
+    --color-primary-text:#ffffff;
+    --color-primary-hover:#3285b1;
+    --color-primary-light:#e5eef3;
+    --color-primary-light-text:#00293f;
+    --color-primary-light-hover:#d9e2e6;
+    --color-primary-element:#3D5978 !important;
+    --color-primary-element-hover:#004f76;
+    --color-primary-element-text:#3D5978 ;
+    --color-primary-element-text-dark:#ffffff;
+    --color-primary-element-light:#e5eef3;
+    --color-primary-element-light-hover:#d9e2e6;
+    --color-primary-element-light-text:#002537;
+    --gradient-primary-background:white ;
+    --image-background-default: none !important;
+    --color-background-plain:white !important;
+  }
+  
+
+.app-navigation__content .app-navigation-entry.active a.app-navigation-entry-link {
+    background-color: #3D5978 !important;
+}
+li > .app-navigation-entry.active {
+    background-color: #3D5978 !important;
+}
+
+.button-vue--vue-primary {
+    background-color: #3D5978 !important;
+}
+body {
+    background-color: white;
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    width: 100%;
+    height: calc(100vh - env(safe-area-inset-bottom));
+}
+
+/* HEADER */
+
+/* Unified Search Icon */
+.unified-search__button .material-design-icon__svg {
+    fill: #ffffff !important;
+}
+
+/* Notifications Icon */
+.notifications-button .material-design-icon__svg {
+    fill: #ffffff !important;
+}
+
+/* Contacts Menu Icon */
+.contactsmenu .material-design-icon__svg {
+    fill: #ffffff !important;
+}
+
+ #controls *, #view-toggle {
+	color: black !important;
+	opacity: 1 !important;
+}
+#header-right *:not(span) {
+	opacity: 1.0 !important;
+}
+ table {
+	border-collapse: collapse !important;
+ }
+ #filestable tbody tr{
+	border-top: solid 2px transparent;
+	border-left: solid 2px transparent;
+ }
+
+ #filestable tbody tr:hover, #filestable tbody tr:focus, #filestable tbody .name:focus, #filestable tbody tr:hover .filename form, table tr.mouseOver td {
+	border: solid 2px black;
+ }
+
+ .app-navigation-entry .active {
+    background-color: #414447 !important;
+ }
+ #app-navigation li {
+	border: solid 2px transparent;
+ }
+
+ #app-navigation li:hover {
+	border: solid 2px black;
+ }
+ a.action.action-share.permanent.shared-style {
+    display: none !important;
+}
+/* header color */
+/* this is the main brand color */
+#nextcloud {
+    padding: 7px 0;
+    padding-left: 86px;
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+    opacity: 1;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background-color: white;
+}
+
+#header .logo {
+    display: inline-flex;
+    background-image: var(--image-logo);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 62px;
+    position: absolute;
+    left: 12px;
+    top: 15px;
+    bottom: 1px;
+}
+
+#body-user #header, #body-settings #header, #body-public #header {
+    display: inline-flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
+    height: 50px;
+    background-image: none !important;
+    background-color: #3D5978 !important;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+#body-user #header,
+#body-settings #header,
+#body-public #header {
+	/* background-color: #942537; */
+}
+
+/* log in screen background color */
+/* gradient of the header color and a brighter shade */
+/* can also be a flat color or an image */
+#body-login {
+	background: white !important; /* Old browsers */
+}
+
+/* primary action button, use sparingly */
+/* header color as border, brighter shade again, here as background */
+.primary,
+input[type="submit"].primary,
+input[type="button"].primary,
+button.primary,
+.button.primary,
+.primary:active,
+input[type="submit"].primary:active,
+input[type="button"].primary:active,
+button.primary:active,
+.button.primary:active {
+	border-color: #745bca;
+	background-color: #947bea;
+}
+.primary:hover,
+input[type="submit"].primary:hover,
+input[type="button"].primary:hover,
+button.primary:hover,
+.button.primary:hover,
+.primary:focus,
+input[type="submit"].primary:focus,
+input[type="button"].primary:focus,
+button.primary:focus,
+.button.primary:focus {
+	background-color: #8b75e4;
+}
+.primary:active, input[type="submit"].primary:active, input[type="button"].primary:active, button.primary:active, .button.primary:active,
+.primary:disabled, input[type="submit"].primary:disabled, input[type="button"].primary:disabled, button.primary:disabled, .button.primary:disabled,
+.primary:disabled:hover, input[type="submit"].primary:disabled:hover, input[type="button"].primary:disabled:hover, button.primary:disabled:hover, .button.primary:disabled:hover,
+.primary:disabled:focus, input[type="submit"].primary:disabled:focus, input[type="button"].primary:disabled:focus, button.primary:disabled:focus, .button.primary:disabled:focus {
+	background-color: #745bca;
+}
+
+/* use logos from theme */
+#header .logo,
+#firstrunwizard .logo {
+	background-image: url('../img/logo.svg');
+	width: 256px;
+	height: 128px;
+}
+#header .logo-icon {
+	width: 62px;
+	height: 34px;
+}
+
+
+/* files_sharing scss */
+/* WCAG 3.2.4 G201: Underline footer link */
+#body-public footer p a {
+	text-decoration: underline;
+}
+
+p.hint {
+    margin-top: -12px !important;
+}
+
+div#app-content-trashbin thead {
+    display: none !important;
+}
+
+a.filename.rich-text--component{
+    color: blue !important;
+    text-decoration: underline !important;
+}
+
+
+label#uploadavatarbutton {
+    display: none;
+}
+
+#filestable > thead, div#controls{
+    background-color: white !important;
+}
+
+/* aafc TODO: move. Changes to support loginflow */
+.picker-window {
+    padding: 0 !important;
+    background: rgba(128, 128, 128, 0.16);
+    width: 700px;
+    margin: auto;
+}
+.picker-window > #redirect-link {
+    text-align: center;
+}
+.picker-window > h2 {
+    background-color: #38414d;
+    padding: 10px 15px;
+    font-size: 26px;
+    color: white;
+    text-align: center;
+}
+.picker-window > p.info, .picker-window > .warning {
+    color:black;
+    text-shadow: none;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.picker-window  #redirect-link > a > input{
+    background-color: #26374a;
+    border-color: #26374a;
+    border-style: outset;
+    height: auto;
+    min-height: 36px;
+    min-width: 36px;
+    white-space: normal;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 10px 14px;
+    font-size: 16px;
+    line-height: 1.4375;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: white;
+}
+#submit-wrapper > .login {
+    background-color: #26374a;
+    border-color: #26374a;
+    border-style: outset;
+    height: auto;
+    min-height: 36px;
+    min-width: 36px;
+    white-space: normal;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 10px 14px;
+    font-size: 16px;
+    line-height: 1.4375;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: white; 
+}
+
+
+footer, #app-token-login {
+    display: none;
+}
