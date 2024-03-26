@@ -76,29 +76,6 @@ script('settings', [
 	<div class="personal-settings-setting-box personal-settings-locale-box">
 		<div id="vue-locale-section"></div>
 	</div>
-	<div class="personal-settings-setting-box">
-		<div id="vue-website-section"></div>
-	</div>
-	<div class="personal-settings-setting-box">
-		<div id="vue-twitter-section"></div>
-	</div>
-	<div class="personal-settings-setting-box">
-		<div id="vue-fediverse-section"></div>
-	</div>
-	<?php if ($_['profileEnabledGlobally']) : ?>
-		<div class="personal-settings-setting-box">
-			<div id="vue-organisation-section"></div>
-		</div>
-		<div class="personal-settings-setting-box">
-			<div id="vue-role-section"></div>
-		</div>
-		<div class="personal-settings-setting-box">
-			<div id="vue-headline-section"></div>
-		</div>
-		<div class="personal-settings-setting-box">
-			<div id="vue-biography-section"></div>
-		</div>
-	<?php endif; ?>
 	<span class="msg"></span>
 
 	<div id="personal-settings-group-container"></div>
