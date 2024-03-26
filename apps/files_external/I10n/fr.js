@@ -1,0 +1,14 @@
+OC.L10N.register(
+    "files_external",
+    {
+        "Are you sure you want to delete this external storage?" : "Êtes-vous sûr de vouloir supprimer ce stockage externe?",
+        "Are you sure you want to delete the file(s)?" : "Voulez-vous vraiment supprimer le fichier?",
+        "Cancel" : "Annuler",
+        "Delete File?" : "Supprimer le fichier?",
+        "Delete File" : "Supprimer le fichier",
+        "Yes": "Oui",
+        "No": "Non",
+        "Proceed with download?":"Procéder au téléchargement?",
+        "Download" : "Télécharger"  
+    },
+"nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
