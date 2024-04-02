@@ -385,7 +385,10 @@ label#uploadavatarbutton {
     color: white; 
 }
 
-
 footer, #app-token-login {
     display: none;
+}
+
+.infinite-loading-container {
+    display: none !important;
 }
